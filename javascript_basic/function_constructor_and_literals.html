@@ -1,0 +1,35 @@
+<html>
+<head>
+<script type="text/javascript">
+
+// var variablename = new Function(Arg1, Arg2..., "Function Body");
+var func = new Function("x", "y", "return x*y;");
+function func_const()
+{
+    var result;
+    result = func(10,20);
+    document.write ( result );
+}
+
+// var variablename = function(Argument List){ Function Body };
+var func_lit = function(x,y){ return x*y };
+function func_literals()
+{
+    var ans;
+    ans = func_lit(10,20);
+    document.write (ans);
+}
+
+</script>
+</head>
+<body>
+<p>Click the following button to show demo of function constructor.</p>
+<form>
+<input type="button" onclick="func_const()" value="Call Function constructor">
+<p>Click the following button to show demo of function constructor.</p>
+<form>
+<input type="button" onclick="func_literals()" value="Call Function literals">
+</form>
+</form>
+</body>
+</html>

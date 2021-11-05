@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function cookie_func()
+{
+        if( document.cookieform.customer.value == "" ){
+        alert ("Enter some value!");
+        return;
+        }
+        cookie_value= escape(document.cookieform.customer.value) + ";";
+        document.cookie="name=" + cookie_value;
+        document.write ("Setting Cookies : " + "name=" + cookie_value );
+}
+
+</script>
+</head>
+<body>
+<form name="cookieform" action="">
+Enter name: <input type="text" name="customer"/>
+<input type="button" value="Set Cookie" onclick="cookie_func();"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function cookie_expire()
+{
+    var now = new Date();
+    now.setMonth( now.getMonth() + 1 );
+    cookie_value = escape(document.expire_form.customer.value) + ";"
+    document.cookie="name=" + cookie_value;
+    document.cookie = "expires=" + now.toUTCString() + ";"
+    document.write ("Setting Cookies : " + "name=" + cookie_value );
+}
+
+</script>
+</head>
+<body>
+<form name="expiry_form" action="">
+Enter name : <input type="text" name="customer"/>
+<input type="button" value="Set Cookie" onclick="cookie_expire()"/>
+</form>
+</body>
+</html>

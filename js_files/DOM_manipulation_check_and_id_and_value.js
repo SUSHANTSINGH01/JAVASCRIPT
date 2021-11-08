@@ -1,4 +1,4 @@
-function fn1()
+function checkfn()
 {
     
    

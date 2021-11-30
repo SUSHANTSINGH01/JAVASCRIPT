@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            set up jquery
+        </title>
+        <link rel="stylesheet" href="selectors.css">
+
+    </head>
+    <body>
+        <h2 class="myheading" id="firsth1"> selectors1 up jquery. </h2>
+        <h2 class="myheading"> selectors2 up jquery. </h2>
+        <h2> selectors up jquery.</h2>
+        
+        <div id="firstdiv" class="mydivs">
+            <p>this is first in first division.</p>
+            <p>this is second in first division.</p>
+        </div>
+        <div id="seconddiv" class="mydivs">
+            <p>this is third in second division.</p>
+        </div>
+        <div id="thirddiv" class="mydivs">
+           <li>list item 1.</li>
+           <li>list item 2.</li>
+           <li>list item 3.</li>
+           <li>list item 4.</li>
+        </div>
+        <button onclick="fn1()" id="btn1"> click me </button>
+    </body>
+
+    <script src = "jquery.js"></script>
+    <script>
+    function fn1()
+    {
+      // $("h2").fadeToggle(2000);// tag selector
+     // $("#firsth1").fadeToggle(1000);// id selector
+     // $(".myheading").fadeToggle(1000);// class selector
+
+    // $("#firstdiv,p,li").fadeToggle(1000);// multiple selectors
+
+    $("#firstdiv,li:even").fadeToggle(1000)
+
+    }
+    </script>
+   
+</html>

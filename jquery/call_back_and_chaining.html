@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>
+            set up jquery
+        </title>
+        <link rel="stylesheet" href="selectors.css">
+
+    </head>
+    <body>
+        <h2 class="myheading" id="firsth1"> selectors1 up jquery. </h2>
+        <h2 class="myheading"> selectors2 up jquery. </h2>
+        <h2> selectors up jquery.</h2>
+        
+        <button  id="btntoggle">toggle button</button>
+        <button id="btn2"> click me 2 </button>
+        <button  id="btn3"> click me 3</button>
+        
+        <div id="firstdiv" class="mydivs">
+            <p>this is first in first division.</p>
+            <p>this is second in first division.</p>
+        </div>
+        <div id="seconddiv" class="mydivs">
+            <p>this is third in second division.</p>
+        </div>
+         <div id="thirddiv" class="mydivs">
+           <li>list item 1.</li>
+           <li>list item 2.</li>
+           <li>list item 3.</li>
+           <li>list item 4.</li>
+           </div>
+        <div id="cube" class = "mycube">
+        <p>Cube</p>
+    
+
+        </div>
+       
+    </body>
+
+    <script src = "jquery.js"></script>
+    
+    <script>
+        
+        $(document).ready(function(){
+          
+    //  $("#btntoggle").click(function()
+    //  {
+    //     $("#firstdiv").fadeToggle(1000,function(){
+    //         alert("division is faded");
+    //     });
+    // });
+
+    // function printmsg()
+    // {
+    //     alert("effect time");
+    // }
+    // $("#btntoggle").click(function()
+    // {
+    //     $("#firstdiv").slideToggle(1000,printmsg);
+    // });
+
+    $("#btntoggle").click(function(){
+        
+        $("#firstdiv").slideUp(1000).slideDown(1000).fadeOut(1000).fadeIn(1000);
+    });
+
+
+
+
+});
+    </script>
+   
+</html>

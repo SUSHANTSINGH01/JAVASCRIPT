@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>
+            Dom manipulators.
+        </title>
+        <link rel="stylesheet" href="selectors.css">
+
+    </head>
+    <body>
+        <h2>jquery DOM manipulations. </h2>
+        
+        <button  id="btn1">Append.</button>
+        <button  id="btn2">After.</button>
+        <button  id="btn3">prepend.</button>
+        <button  id="btn4">before.</button>
+        <br>
+        <br>
+        <button  id="btn5">Remove.</button>
+        <button  id="btn6">Empty.</button>
+        
+        <div id="div1" class="mydivs">
+            <p id="p1" class="p1class">this is first <b> para 1</b> in first division.</p>
+            <p id="p2" class="p2class">this is first <b> para 1</b> in first division.</p>
+            <p id="p3" class="p3class">this is first <b> para 1</b> in first division.</p>
+        </div>
+    </body>
+
+    <script src = "jquery.js" type="text/javascript"></script>
+    
+    <script>
+         $(document).ready(function(){
+            
+            $("#btn1").click(function()
+            {
+              $("#div1").append("<p>this is para 2 in first div</p>");
+            });
+
+            $("#btn2").click(function()
+            {
+                $("#div1").after("<p>this is after the para 1 in first div</p>");
+              
+            });
+
+            $("#btn3").click(function()
+            {
+                $("#div1").before("<p>this is before the para 1 in first div</p>");
+              
+            });
+
+            $("#btn4").click(function()
+            {
+                $("#div1").prepend("<p>this is prepend function  in first div</p>");
+              
+            });
+
+            $("#btn5").click(function()
+            {
+                $("p").remove(".p1class,.p2class");
+              
+            });
+
+            $("#btn6").click(function()
+            {
+                $("#div1").empty();
+              
+            });
+
+         });
+         </script>
+         </html>

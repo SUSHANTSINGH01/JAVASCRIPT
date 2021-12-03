@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+            Introduction to jquery UI.
+        </title>
+        <link rel="stylesheet" href="Dom.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+
+    </head>
+    <body>
+        <div id="mydiv">
+           <h3>Introduction to jquery UI.</h3>
+           <input id="dateinput" type="text">
+       
+        </div>
+    </body>
+    
+    <script src = "jquery.js" type="text/javascript"></script>
+    <script src = "jqueryui/jquery-ui.js" type="text/javascript"></script>
+    
+    
+    <script>
+        $("#dateinput").datepicker({
+
+            numberOfMonths : 1,
+            changeYear : true,
+            changeMonth : true,
+            showWeek : true,
+            weekHeader : "wk num",
+            showOhterMonths : true,
+            minDate : new Date(2020,7,1),
+            maxDate : new Date(2023,5,30)
+
+        });
+    </script>
+</html>

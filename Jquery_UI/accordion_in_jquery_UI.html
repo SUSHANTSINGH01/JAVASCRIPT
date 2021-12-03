@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>
+            Introduction to jquery UI.
+        </title>
+        <link rel="stylesheet" href="Dom.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+
+    </head>
+    <body>
+        <h2>Accordion in jquery UI.</h2>
+        <div id="panels">
+            <h3>first block.</h3>  
+        <p>this is most important thing in the world that every thing should be .......</p>
+        <h3>Second block.</h3>  
+        <p>this is most important thing in the world that every thing should be .......</p>
+        <h3>Third block.</h3>  
+        <p>this is most important thing in the world that every thing should be .......</p>
+       
+        </div>
+    </body>
+    
+    <script src = "jquery.js" type="text/javascript"></script>
+    <script src = "jqueryui/jquery-ui.js" type="text/javascript"></script>
+    
+    
+    <script>
+        //$("#panels").accordion();
+
+        $("#panels").accordion({
+
+            collapsible : true,
+            //event : "mouseover",
+            event : "click",
+            animate : 2000,
+            active : 0,
+            heightstyle : true,
+            icons : {
+                header : "ui-icon-plus",
+                activeHeader : "ui-icon-minus"
+            }
+
+        });
+    </script>
+</html>

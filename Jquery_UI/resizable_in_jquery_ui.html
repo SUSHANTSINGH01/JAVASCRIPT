@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            resizable jquery UI.
+        </title>
+        <link rel="stylesheet" href="drag.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+
+    </head>
+    <body>
+        <h2>Resizable jquery UI.</h2>
+        <div id="mydivs" >
+            <img id="resize" src="img/bridge japan.jpg " width="250px">
+        </div>
+            
+        </body>
+
+       
+        <script src = "jquery.js" type="text/javascript"></script>
+    <script src = "jqueryui/jquery-ui.js" type="text/javascript"></script>
+    
+    
+    <script>
+        $("#resize").resizable({
+            
+            maxWidth : 500,
+            maxHight : 500,
+            autoHide  : true,
+            ghost : true,
+            aspectRatio : true
+          
+        });
+    </script>
+    </html>

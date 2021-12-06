@@ -1,0 +1,79 @@
+// download theme from jqueryui website and replace link after theme file in working file 
+
+<html>
+    <head>
+        <title>
+            Introduction to jquery UI.
+        </title>
+        <link rel="stylesheet" href="Dom.css">
+        <link rel="stylesheet" href="jquery-ui-theme/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui-theme/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui-theme/jquery-ui.theme.css">
+
+    </head>
+    <body>
+        <h2> themes in jquery UI.</h2>
+
+        <div id="dateinput" title="My calender">
+
+        </div>
+
+        <div id="messagebox" title="Messagebox">
+            <h3> this is theme demo.</h3>
+            <img src="img/bridge japan.jpg" width="250px">
+        </div>
+
+        <br>
+        <div id="panels" style="width:80%">
+            <div>sample things.</div>
+            <div>sample thingsis <b>easy to taken.</b></div>
+            <h3>learn something new.</h3>
+        </div>
+
+        <script src = "jquery.js" type="text/javascript"></script>
+    <script src = "jquery-ui-theme/jquery-ui.js" type="text/javascript"></script>
+    
+    
+    <script>
+        //$("#panels").accordion();
+
+        $("#dateinput").datepicker({
+
+            numberOfMonths : 1,
+            changeYear : true,
+            changeMonth : true,
+            showWeek : true,
+            weekHeader : "wk num",
+            showOhterMonths : true,
+            minDate : new Date(2020,7,1),
+            maxDate : new Date(2023,5,30)
+
+        });
+
+        $("#messagebox").dialog({
+
+            title : "Custom message box",
+            draggable : true,
+            resizable : true,
+            height : 250,
+            width : 250,
+            modal : false
+        });
+
+
+        $("#panels").accordion({
+
+            collapsible : true,
+            //event : "mouseover",
+            event : "click",
+            animate : 2000,
+            active : 0,
+            heightstyle : true,
+            icons : {
+                header : "ui-icon-plus",
+                activeHeader : "ui-icon-minus"
+            }
+
+        });
+    </script>
+    </html>

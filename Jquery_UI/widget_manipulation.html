@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>
+         sortable feature in jquery UI.
+        </title>
+        <link rel="stylesheet" href="drag.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+
+    </head>
+    <body>
+        <h2>Widget Manipulation</h2>
+        <button id="actionbtn"> Change </button>
+        <br>
+        <br>
+        <div id="dateinput" title="my calender">
+        </div>
+
+        <div id="messagebox" title="Messagebox">
+            <h3> this is practice time .</h3>
+            <img src="img/bridge japan.jpg" style="width:250px">
+       </div>
+       <br>
+       <div id="panels" style="width:80%">
+    <div>
+        start your journey
+    </div>
+    <div> abcd efg hij klm nop qrst ubhkjyydyh ihgfjijoes absent is not a deal with a conssitency . </div>
+    <h3> sushant singh.</h3>
+    <p> it is very tought to be very consistency at every level. and most importantantly it is about yoyr concebtratiojn  .</p>
+    <h3>ABCDE</h3>
+    <p>this is why every one is learning at their level.</p>    
+    </div>
+
+        <script src = "jquery.js" type="text/javascript"></script>
+    <script src = "jqueryui/jquery-ui.js" type="text/javascript"></script>
+    
+    
+    <script>
+        $("#dateinput").datepicker({
+
+            numberOfMOnths : 1,
+            changeYear : true,
+            changeMonth : true,
+            showWeek : true,
+            weekHeader : "Wk no",
+            showOtherMonths : true,
+            minDate : new Date(2020,11,30),
+            maxDate : new Date(2023,5,30)
+
+            
+        });
+        $("#messagebox").dialog({
+            title : "custom message",
+            draggable : true,
+            resizable : true,
+            height : true,
+            width : true,
+            modal : false
+
+        });
+
+        $("#panels").accordion({
+
+            collapsible : true,
+            event : "click",
+            animate : 300,
+            active : 0,
+            heightstyle : true,
+
+        });
+        $("#actionbtn").click(function()
+        {
+            $("#messagebox").dialog("option","draggable",false);
+            $("#messagebox").dialog("option","resizable",false);
+
+        })
+
+    </script>
+    </html>
